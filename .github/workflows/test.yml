@@ -16,6 +16,6 @@ jobs:
         run: npx tsc
       
       - name: Running Tests
-        run: node dist/main.js
+        run: node dist/test.js
 
 
