@@ -1,0 +1,13 @@
+html
+  head 
+    title Poll
+    link(rel="stylesheet", href="poll.css")
+  body 
+    div.poll#poll 
+      each i in [...Array(labels.length).keys()]
+        button(onclick="vote(" + i + ");")= labels[i]
+    
+    div.message-container#message-container
+      h1 Thank you for voting
+    
+    script(src="poll.js")

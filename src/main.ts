@@ -1,6 +1,6 @@
 import express from "express";
 import { WebSocketServer } from "ws";
-import { guid } from "./lib";
+import { guid } from "./lib.js";
 
 const port = 8000;
 const wsServer = new WebSocketServer( { noServer: true } );
@@ -19,7 +19,7 @@ wsServer.on('connection', (socket : any, request) => {
     let event_data = event.toString();
     let data = {
       id: socket.id,
-      text: JSON.parse(event_data).text
+      msg: JSON.parse(event_data).msg
     };
     console.log(data);
     let data_str = JSON.stringify(data);
