@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<title>Realtime Survey</title>
+	</head>
+	<body>
+		<h1>Realtime Survey</h1>
+		<p>
+			Create a poll. Share the QR code. Watch the chart update in real time.
+		</p>
+
+		<form id="request-poll-form" action="https://x8b57wk77h.execute-api.us-east-2.amazonaws.com/default/realtime-survey-auth" method="POST">
+			<div>
+				<label for="email">Email</label>
+				<input name="email" id="email" value="tomyahu@gmail.com" />
+			</div>
+			<div>
+				<button>Get Started</button>
+			</div>
+		</form>
+
+	</body>
+</html>
